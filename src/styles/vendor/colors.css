@@ -1,0 +1,163 @@
+/* Color tokens - qurl brand (dark PRIMARY, light derived - P1 designer ruling).
+   Structure preserved from the Shadcn Studio base; values re-pointed at token level only.
+   Accent: ONE orange #FE6800 with WHITE labels on fills (2.9:1 - designer-accepted
+   exception to the 4.5 floor, logged); accent-as-text steps pass AA per mode.
+   Surface ruling: OUTLINE STYLE - dark cards are TRANSPARENT with white hairline
+   borders (16%); popovers/overlays stay SOLID (O7). Neutral + blue ramps kept as
+   support palettes. */
+:root {
+  /* neutral primitives (support) */
+  --neutral-50: oklch(0.985 0 0);
+  --neutral-100: oklch(0.97 0 0);
+  --neutral-200: oklch(0.922 0 0);
+  --neutral-300: oklch(0.87 0 0);
+  --neutral-400: oklch(0.708 0 0);
+  --neutral-500: oklch(0.556 0 0);
+  --neutral-600: oklch(0.439 0 0);
+  --neutral-700: oklch(0.371 0 0);
+  --neutral-800: oklch(0.269 0 0);
+  --neutral-900: oklch(0.205 0 0);
+  --neutral-950: oklch(0.145 0 0);
+  /* legacy blue primitives (support palette - kept, no longer feeds brand tokens) */
+  --blue-50: oklch(0.97 0.014 254.604);
+  --blue-100: oklch(0.932 0.032 255.585);
+  --blue-200: oklch(0.882 0.059 254.128);
+  --blue-300: oklch(0.809 0.105 251.813);
+  --blue-400: oklch(0.707 0.165 254.624);
+  --blue-500: oklch(0.623 0.214 259.815);
+  --blue-600: oklch(0.546 0.245 262.881);
+  --blue-700: oklch(0.488 0.243 264.376);
+  --blue-800: oklch(0.424 0.199 265.638);
+  --blue-900: oklch(0.379 0.146 265.522);
+  --blue-950: oklch(0.282 0.091 267.935);
+  /* qurl orange primitives - the brand accent ramp; 500 = brand #FE6800 */
+  --orange-50: oklch(0.98 0.016 73.7);
+  --orange-100: oklch(0.954 0.037 75.2);
+  --orange-200: oklch(0.901 0.073 70.7);
+  --orange-300: oklch(0.837 0.117 66.3);
+  --orange-400: oklch(0.758 0.159 55.9);
+  --orange-500: oklch(0.697 0.202 44.3);
+  --orange-600: oklch(0.646 0.194 41.1);
+  --orange-700: oklch(0.553 0.174 38.4);
+  --orange-800: oklch(0.47 0.143 37.3);
+  --orange-900: oklch(0.408 0.116 38.2);
+  --orange-950: oklch(0.266 0.076 36.3);
+  /* qurl purple primitives - the gradient partner; 600 = brand #7A2BD9 */
+  --purple-50: oklch(0.963 0.021 301.1);
+  --purple-100: oklch(0.934 0.037 300.8);
+  --purple-200: oklch(0.876 0.072 300.2);
+  --purple-300: oklch(0.788 0.124 298.3);
+  --purple-400: oklch(0.67 0.175 299.3);
+  --purple-500: oklch(0.528 0.236 304.1);
+  --purple-600: oklch(0.507 0.24 297.3);
+  --purple-700: oklch(0.491 0.241 292.6);
+  --purple-800: oklch(0.432 0.211 292.8);
+  --purple-900: oklch(0.38 0.178 293.7);
+  --purple-950: oklch(0.255 0.074 302.2);
+  /* LIGHT mode (derived secondary) */
+  --background: oklch(0.975 0.004 106.5);
+  --foreground: oklch(0.188 0.006 285.8);
+  --card: oklch(0 0 0 / 0); /* OUTLINE ruling extended 02.09: transparent cards + hairline in BOTH modes (light kept an opaque fill - designer bug report) */
+  --card-foreground: oklch(0.188 0.006 285.8);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.188 0.006 285.8);
+  --primary: var(--orange-500);
+  --primary-foreground: oklch(1 0 0); /* white labels on orange - designer ruling, exception logged */
+  --secondary: var(--purple-100);
+  --secondary-foreground: var(--purple-700);
+  --muted: oklch(0.945 0.004 106);
+  --muted-foreground: oklch(0.487 0.02 274.5);
+  --accent: var(--orange-50);
+  --accent-foreground: var(--orange-700);
+  --destructive: oklch(0.505 0.19 27.5); /* #B91C1C-class, text 6.0:1 on canvas */
+  --border: oklch(0.188 0.006 285.8 / 20%); /* outline ruling: ink-alpha hairline */
+  --input: oklch(0.188 0.006 285.8 / 16%);
+  --ring: var(--orange-400);
+  --chart-1: var(--orange-500);
+  --chart-2: var(--purple-600);
+  --chart-3: oklch(0.63 0.2 17.8);
+  --chart-4: oklch(0.52 0.094 223.1);
+  --chart-5: oklch(0.776 0.159 59.0);
+  --sidebar: oklch(0.96 0.004 106);
+  --sidebar-foreground: oklch(0.188 0.006 285.8);
+  --sidebar-primary: var(--orange-500);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: var(--orange-50);
+  --sidebar-accent-foreground: var(--orange-700);
+  --sidebar-border: oklch(0.188 0.006 285.8 / 16%);
+  --sidebar-ring: var(--orange-400);
+  /* semantic aliases */
+  --surface-page: var(--background);
+  --surface-card: var(--card);
+  --surface-popover: var(--popover);
+  --surface-muted: var(--muted);
+  --text-body: var(--foreground);
+  --text-muted: var(--muted-foreground);
+  --text-on-primary: var(--primary-foreground);
+  /* status tokens - QR domain: success / warning (yellow - never collides with the
+     orange accent, designer ruling) / hard-block (quarantine, dead code) */
+  --success: oklch(0.52 0.11 150);
+  --success-soft: oklch(0.94 0.04 150);
+  --warning: oklch(0.554 0.121 66.4);
+  --warning-soft: oklch(0.95 0.05 95);
+  --hard-block: var(--destructive);
+  --hard-block-soft: oklch(0.94 0.03 27);
+  /* qurl brand ground (mesh + grain) and effect tokens (EF grants, tokenized) */
+  --mesh-base: oklch(0.21 0.089 290.2);
+  --grad-hero: linear-gradient(135deg, #7A2BD9 0%, #E9445A 52%, #FF8A3C 100%);
+  --glow-purple: 122 43 217;   /* rgb triplets for rgb(var(--glow-purple) / a) */
+  --glow-orange: 254 104 0;
+  --glow-energy: 0.55;         /* light canvas runs ~55% of dark energy (P6) */
+  --noise-alpha: 0.03;
+  /* glass tokens - DORMANT (declared style is Enhanced Flat; shipped per GL1) */
+  --glass-bg: oklch(1 0 0 / 60%);
+  --glass-chrome: oklch(1 0 0 / 55%);
+  --glass-strong: oklch(1 0 0 / 92%);
+  --glass-border: oklch(0.188 0.006 285.8 / 16%);
+  --glass-blur: 14px;
+}
+.dark {
+  /* DARK mode - THE PRIMARY (P1). Canvas #0B0B0E; outline surfaces. */
+  --background: oklch(0.151 0.006 285.6);
+  --foreground: oklch(0.965 0.005 275.0);
+  --card: oklch(0 0 0 / 0); /* OUTLINE ruling: transparent cards, hairline borders */
+  --card-foreground: oklch(0.965 0.005 275.0);
+  --popover: oklch(0.234 0.013 285.3); /* overlays stay SOLID (O7) */
+  --popover-foreground: oklch(0.965 0.005 275.0);
+  --primary: var(--orange-500);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--purple-950);
+  --secondary-foreground: var(--purple-300);
+  --muted: oklch(1 0 0 / 8%);
+  --muted-foreground: oklch(0.752 0.024 272.0);
+  --accent: oklch(0.697 0.202 44.3 / 18%);
+  --accent-foreground: var(--orange-400);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 16%); /* white hairline - designer-tuned */
+  --input: oklch(1 0 0 / 12%);
+  --ring: var(--orange-500);
+  --chart-1: var(--orange-400);
+  --chart-2: var(--purple-300);
+  --chart-3: oklch(0.711 0.166 22.2);
+  --chart-4: oklch(0.797 0.134 211.5);
+  --chart-5: oklch(0.905 0.166 98.1);
+  --sidebar: oklch(0.17 0.008 285.5);
+  --sidebar-foreground: oklch(0.965 0.005 275.0);
+  --sidebar-primary: var(--orange-500);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.697 0.202 44.3 / 16%);
+  --sidebar-accent-foreground: var(--orange-400);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: var(--orange-500);
+  --success: oklch(0.8 0.17 152);      /* #4ADE80-class, 11.3:1 */
+  --success-soft: oklch(0.52 0.11 150 / .2);
+  --warning: oklch(0.905 0.166 98.1);
+  --warning-soft: oklch(0.905 0.166 98.1 / .14);
+  --hard-block-soft: oklch(0.577 0.245 27.325 / .2);
+  --glow-energy: 1;
+  --noise-alpha: 0.05;
+  --glass-bg: oklch(0.234 0.013 285.3 / 60%);
+  --glass-chrome: oklch(0.151 0.006 285.6 / 60%);
+  --glass-strong: oklch(0.234 0.013 285.3 / 93%);
+  --glass-border: oklch(1 0 0 / 14%);
+}

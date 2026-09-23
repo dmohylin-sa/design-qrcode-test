@@ -1,0 +1,37 @@
+:root {
+  --radius: 0.625rem; /* 10px */
+  --radius-sm: calc(var(--radius) - 4px); /* 6px */
+  --radius-md: calc(var(--radius) - 2px); /* 8px - buttons, inputs */
+  --radius-lg: var(--radius); /* 10px - alerts, dialogs, tabs list */
+  --radius-xl: calc(var(--radius) + 4px); /* 14px - cards */
+  --spacing: 0.25rem; /* 4px base unit */
+  /* spacing scale - Tailwind-style names (value = step × 4px) */
+  --space-px: 1px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --header-height: 64px;
+  --header-z-index: 30; /* @kind other */
+  /* shadow system: color oklch(0.3 0.0891 19.6), opacity 0.08, blur 3px, y 1px */
+  --shadow-color: oklch(0.3 0.0891 19.6);
+  --shadow-2xs: none;
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow: none;
+  --shadow-md: 0 1px 3px 0px oklch(0.3 0.0891 19.6 / 0.08), 0 2px 4px -1px oklch(0.3 0.0891 19.6 / 0.08);
+  --shadow-lg: 0 1px 3px 0px oklch(0.3 0.0891 19.6 / 0.08), 0 4px 6px -1px oklch(0.3 0.0891 19.6 / 0.08);
+  --shadow-xl: 0 1px 3px 0px oklch(0.3 0.0891 19.6 / 0.08), 0 8px 10px -1px oklch(0.3 0.0891 19.6 / 0.08);
+  --shadow-2xl: 0 1px 3px 0px oklch(0.3 0.0891 19.6 / 0.2);
+}

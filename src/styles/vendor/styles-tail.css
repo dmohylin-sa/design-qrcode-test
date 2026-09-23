@@ -1,0 +1,3 @@
+/* qurl consistency ruling (SEL2c/DC12 extension, 01.09.2026): ONE definer per chip -
+   ghost (soft-fill) badges carry NO border; only unfilled outline chips keep the hairline. */
+.ss-badge { border: none; }

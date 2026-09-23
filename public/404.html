@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found</title>
+    <style>
+      /* Standalone on purpose: a static host serves this file at whatever path was
+         requested, so it can load no relative asset of its own. Restyle it with the
+         brand's colours, but keep everything inline. */
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0; min-height: 100vh;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 16px;
+        padding: 48px 16px; text-align: center;
+        background: #f5f5f5; color: #111111;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      .big { font: 800 72px/1 inherit; margin: 0; letter-spacing: -0.03em; }
+      h1 { font: 700 22px/1.25 inherit; margin: 0; }
+      p { margin: 0; max-width: 420px; font-size: 14px; line-height: 1.6; opacity: 0.7; }
+      a {
+        margin-top: 8px; padding: 10px 18px; border-radius: 999px;
+        border: 2px solid currentColor; color: inherit;
+        font-weight: 700; font-size: 14px; text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="big">404</p>
+    <h1>This page does not exist</h1>
+    <p>The address may have been mistyped. Nothing else has changed - the app is still here.</p>
+    <a id="home" href="/">Go to the app</a>
+    <script>
+      // The app is a hash router: every route it produces lives after "#", so this file
+      // only ever runs on a path that was typed by hand. It deliberately does NOT
+      // redirect - the site root cannot be derived from an arbitrary path, and a wrong
+      // guess is worse than a clear page. It only points the link at the likeliest root.
+      ;(function () {
+        var parts = location.pathname.split('/').filter(Boolean)
+        var onProjectSite = location.hostname.endsWith('github.io') && parts.length > 1
+        document.getElementById('home').setAttribute('href', onProjectSite ? '/' + parts[0] + '/' : '/')
+      })()
+    </script>
+  </body>
+</html>

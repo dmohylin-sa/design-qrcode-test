@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<clipPath id="ql"><rect x="0" y="0" width="50" height="100"/></clipPath>
+<clipPath id="qr"><rect x="50" y="0" width="50" height="100"/></clipPath>
+<path clip-path="url(#ql)" fill-rule="evenodd" fill="#8B2FD6" d="M50 2a48 48 0 1 0 0 96a48 48 0 1 0 0-96zM50 2c-15.5 0-28 21.5-28 48s12.5 48 28 48s28-21.5 28-48s-12.5-48-28-48z"/>
+<path clip-path="url(#qr)" fill-rule="evenodd" fill="#FF9A3D" d="M50 2a48 48 0 1 0 0 96a48 48 0 1 0 0-96zM50 2c-15.5 0-28 21.5-28 48s12.5 48 28 48s28-21.5 28-48s-12.5-48-28-48z"/>
+<path clip-path="url(#ql)" fill-rule="evenodd" fill="#E9445A" d="M50 2c-15.5 0-28 21.5-28 48s12.5 48 28 48s28-21.5 28-48s-12.5-48-28-48zM50 2c-6.5 0-11.5 21.5-11.5 48s5 48 11.5 48s11.5-21.5 11.5-48s-5-48-11.5-48z"/>
+<path clip-path="url(#qr)" fill-rule="evenodd" fill="#F1582B" d="M50 2c-15.5 0-28 21.5-28 48s12.5 48 28 48s28-21.5 28-48s-12.5-48-28-48zM50 2c-6.5 0-11.5 21.5-11.5 48s5 48 11.5 48s11.5-21.5 11.5-48s-5-48-11.5-48z"/>
+<circle cx="50" cy="50" r="26" fill="#131316"/>
+</svg>
