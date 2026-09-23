@@ -7,7 +7,7 @@ npm install
 npm run dev
 ```
 
-Sign in with any email address and the demo password **`qurl-demo`**.
+Sign in with any email address and the demo password **`geniusee`**.
 
 > The sign-in is a demo gate, not access control. The password is a constant in the client
 > bundle (`src/lib/auth.jsx`) - it keeps the demo tidy, it protects nothing.
