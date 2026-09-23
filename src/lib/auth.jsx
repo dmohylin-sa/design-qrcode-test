@@ -6,7 +6,7 @@ import { Navigate, useLocation } from 'react-router-dom'
  * exists to show the screens, and the sign-in is part of that story rather than real
  * access control. Say so; never imply otherwise.
  */
-const DEMO_PASSWORD = 'qurl-demo'
+const DEMO_PASSWORD = 'geniusee'
 const STORAGE_KEY = 'qurl.session'
 
 const AuthContext = createContext(null)
